@@ -72,7 +72,7 @@
                 e.preventDefault();
                 const formData = new FormData(formConsulta);
                 const consulta = formData.get('consulta');
-                const response = await fetch('http://localhost:8000/consultas', {
+                const response = await fetch('http://127.0.0.1:8000/consultas', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
