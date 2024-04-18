@@ -7,9 +7,10 @@ class DatosConsulta(BaseModel):
     consulta: str
 
 def consultas(datos: DatosConsulta):
-    model = genai.GenerativeModel(model_name="gemini-pro")
+    model = genai.GenerativeModel(model_name="gemini-1.5-pro-latest")
     consulta = datos.consulta
     try:
+        
         response = model.generate_content(consulta)
         return response.text
     except Exception as e:
